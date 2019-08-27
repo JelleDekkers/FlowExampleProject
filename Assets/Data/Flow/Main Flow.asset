@@ -18,7 +18,20 @@ MonoBehaviour:
   - {fileID: 0}
   RuleGroups: []
   Title: Quit Game
-  position: {x: 310, y: 243}
+  position: {x: 728, y: 224}
+--- !u!114 &-7572418864061658075
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5855653ac3eda7a46a6ea6c3cc2b0613, type: 3}
+  m_Name: SpawnScopedPrefabAction
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 833413090842238798, guid: d7963d7832e5a3045903d9104a2d9bd6, type: 3}
 --- !u!114 &-5014604981274711298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33,13 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TemplateActions:
   - {fileID: -2602734355730930321}
-  RunTimeActions:
-  - {fileID: 0}
+  RunTimeActions: []
   RuleGroups:
   - TemplateRules:
     - {fileID: 8359809294072419747}
-    RuntimeRules:
-    - {fileID: 0}
+    RuntimeRules: []
     Destination: {fileID: 2443397432482486347}
     linkData:
       sourceHandleData:
@@ -48,16 +59,27 @@ MonoBehaviour:
         offset: {x: -40, y: 0}
   - TemplateRules:
     - {fileID: 4473829522781924291}
-    RuntimeRules:
-    - {fileID: 0}
+    RuntimeRules: []
     Destination: {fileID: -9062724005157702591}
     linkData:
       sourceHandleData:
-        offset: {x: 136, y: 75}
+        offset: {x: 42, y: -2}
       destinationHandleData:
-        offset: {x: -113, y: -58}
+        offset: {x: -39, y: 1}
   Title: Menu
-  position: {x: 287, y: 105}
+  position: {x: 504, y: 119}
+--- !u!114 &-3956544746056710863
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7908d9ef40c50a2459541f5751734708, type: 3}
+  m_Name: IsLoggedInRule
+  m_EditorClassIdentifier: 
 --- !u!114 &-2602734355730930321
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,6 +124,7 @@ MonoBehaviour:
   - {fileID: -5014604981274711298}
   - {fileID: -9062724005157702591}
   - {fileID: 2443397432482486347}
+  - {fileID: 5730637070537600162}
 --- !u!114 &1399772162410596048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,11 +153,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TemplateActions:
   - {fileID: -1034286000077751401}
-  RunTimeActions: []
+  RunTimeActions:
+  - {fileID: 0}
   RuleGroups:
   - TemplateRules:
     - {fileID: 1399772162410596048}
-    RuntimeRules: []
+    RuntimeRules:
+    - {fileID: 0}
     Destination: {fileID: -5014604981274711298}
     linkData:
       sourceHandleData:
@@ -142,7 +167,7 @@ MonoBehaviour:
       destinationHandleData:
         offset: {x: -137, y: -76}
   Title: Start Game
-  position: {x: 572, y: 131}
+  position: {x: 735, y: 130}
 --- !u!114 &2983682918925015169
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,7 +187,7 @@ MonoBehaviour:
   - TemplateRules:
     - {fileID: 8890260139033250833}
     RuntimeRules: []
-    Destination: {fileID: -5014604981274711298}
+    Destination: {fileID: 5730637070537600162}
     linkData:
       sourceHandleData:
         offset: {x: 40, y: 0}
@@ -171,7 +196,7 @@ MonoBehaviour:
   - TemplateRules:
     - {fileID: 4377320064740409763}
     RuntimeRules: []
-    Destination: {fileID: -5014604981274711298}
+    Destination: {fileID: 5730637070537600162}
     linkData:
       sourceHandleData:
         offset: {x: 40, y: 0}
@@ -219,6 +244,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType:
     classRef: Utils.Core.Events.ExitEvent, Assembly-CSharp
+--- !u!114 &5730637070537600162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a0b12fe5ed01542a30efc26b309e6b, type: 3}
+  m_Name: State
+  m_EditorClassIdentifier: 
+  TemplateActions:
+  - {fileID: -7572418864061658075}
+  RunTimeActions: []
+  RuleGroups:
+  - TemplateRules:
+    - {fileID: -3956544746056710863}
+    RuntimeRules: []
+    Destination: {fileID: -5014604981274711298}
+    linkData:
+      sourceHandleData:
+        offset: {x: 40, y: 0}
+      destinationHandleData:
+        offset: {x: -40, y: 0}
+  Title: Login
+  position: {x: 286, y: 112}
 --- !u!114 &5890793487786830079
 MonoBehaviour:
   m_ObjectHideFlags: 1
