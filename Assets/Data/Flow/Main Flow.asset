@@ -32,6 +32,23 @@ MonoBehaviour:
   m_Name: SpawnScopedPrefabAction
   m_EditorClassIdentifier: 
   prefab: {fileID: 833413090842238798, guid: d7963d7832e5a3045903d9104a2d9bd6, type: 3}
+--- !u!114 &-6862576854147197808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a0b12fe5ed01542a30efc26b309e6b, type: 3}
+  m_Name: State
+  m_EditorClassIdentifier: 
+  TemplateActions: []
+  RunTimeActions: []
+  RuleGroups: []
+  Title: New State
+  position: {x: 263, y: 285}
 --- !u!114 &-5014604981274711298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,11 +199,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TemplateActions:
   - {fileID: 3091037417232357545}
-  RunTimeActions: []
+  RunTimeActions:
+  - {fileID: 0}
   RuleGroups:
   - TemplateRules:
     - {fileID: 8890260139033250833}
-    RuntimeRules: []
+    RuntimeRules:
+    - {fileID: 0}
     Destination: {fileID: 5730637070537600162}
     linkData:
       sourceHandleData:
@@ -195,7 +214,8 @@ MonoBehaviour:
         offset: {x: -40, y: 0}
   - TemplateRules:
     - {fileID: 4377320064740409763}
-    RuntimeRules: []
+    RuntimeRules:
+    - {fileID: 0}
     Destination: {fileID: 5730637070537600162}
     linkData:
       sourceHandleData:
@@ -258,11 +278,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TemplateActions:
   - {fileID: -7572418864061658075}
-  RunTimeActions: []
+  RunTimeActions:
+  - {fileID: 0}
   RuleGroups:
   - TemplateRules:
     - {fileID: -3956544746056710863}
-    RuntimeRules: []
+    RuntimeRules:
+    - {fileID: 0}
     Destination: {fileID: -5014604981274711298}
     linkData:
       sourceHandleData:
